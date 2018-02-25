@@ -8,7 +8,7 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                    <Route path="/" component={Search} />
+                    <Route path="/" component={Profile} />
                     <Route path="/users/:user(/)" component={Profile} />
                 </div>
             </Router>

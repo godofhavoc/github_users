@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { fetchUserProfile, fetchUserRepos } from "../actions"
+import styles from '../css/style.css'
 
 class Profile extends Component {
     componentWillMount() {
@@ -10,13 +11,19 @@ class Profile extends Component {
     }
 
     render() {
-        console.log(this.props)
+        console.log(styles)
         const {profile} = this.props
+
         return (
             Object.keys(profile) ?
-            <div>
-                <img src={profile.avatar_url} />
-                <span>{profile.login}</span>
+            <div className="container">
+                <div className="col-md-2">
+                    <img src={profile.avatar_url} className="profile-image"/>
+
+                    <span>{profile.login}</span>
+                </div>
+
+
                 {
                     this.props.repos['godofhavoc'] ?
                     this.props.repos['godofhavoc'].map(rep => {
