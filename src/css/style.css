@@ -1,11 +1,15 @@
 .container {
-    display: flex;
     margin: 10px;
-    flex-wrap: wrap;
 }
 
 .col-md-2 {
     width: 16.66%;
+    float: left;
+}
+
+.col-md-10 {
+    width: 75.88%;
+    float: right;
 }
 
 .profile-image {

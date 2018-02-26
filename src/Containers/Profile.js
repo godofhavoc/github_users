@@ -23,19 +23,20 @@ class Profile extends Component {
                     <span>{profile.login}</span>
                 </div>
 
-
-                {
-                    this.props.repos['godofhavoc'] ?
-                    this.props.repos['godofhavoc'].map(rep => {
-                        return (
-                            <div>
-                                {rep.name}
-                            </div>
-                        )
-                    })
-                    :
-                    <div>Loading...</div>
-                }
+                <div className="col-md-10">
+                    {
+                        this.props.repos['godofhavoc'] ?
+                        this.props.repos['godofhavoc'].map(rep => {
+                            return (
+                                <div>
+                                    {rep.name}
+                                </div>
+                            )
+                        })
+                        :
+                        <div>Loading...</div>
+                    }
+                </div>
             </div>
             :
             <div>Loading...</div>
